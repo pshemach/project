@@ -15,8 +15,11 @@ export default function ProductItem({ product }) {
   return (
     <div className="product-card">
       <img src={product.images[currentImageIndex]} alt={product.name} />
-      <h3>{product.name}</h3>
+      <h3>
+        {product.name} {product.productId}
+      </h3>
       <p>Qty: {product.quantity}</p>
+      <p>Price: {product.price}</p>
     </div>
   );
 }

@@ -32,7 +32,7 @@ export default function ProductList() {
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
 
-      if (scrollTop + clientHeight >= scrollHeight) {
+      if (scrollTop + clientHeight >= scrollHeight - 500) {
         setOffset((prevOffset) => prevOffset + itemsPerSet);
       }
     };
