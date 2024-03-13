@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ProductItem from "./ProductItem";
 
 export default function Product() {
   const [data, setData] = useState(null);
+  const [imageSet, setImageSet] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const itemsPerSet = 8;
+  const containerRef = useRef(null);
+
   useEffect(() => {
     fetch(`http://localhost:8000/products`)
       .then((res) => res.json())
@@ -12,5 +17,35 @@ export default function Product() {
       })
       .catch((err) => console.error(err));
   }, []);
-  return <div>{data && <ProductItem data={data} />}</div>;
+
+  const getImageSet = () => {
+    const startIndex = (imageSet - 1) * itemsPerSet;
+    const endIndex = startIndex + itemsPerSet;
+    return data ? data.slice(startIndex, endIndex) : [];
+  };
+
+  const handleScroll = () => {
+    const container = containerRef.current;
+    if (container) {
+      const { scrollTop, clientHeight, scrollHeight } =
+        document.documentElement;
+      if (scrollTop + clientHeight >= scrollHeight) {
+        setImageSet((prevSet) => prevSet + 1);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div>
+      <div ref={containerRef}>
+        {data && <ProductItem data={getImageSet()} />}
+        {isLoading && <p>Loading...</p>}
+      </div>
+    </div>
+  );
 }

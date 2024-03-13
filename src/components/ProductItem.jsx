@@ -2,15 +2,19 @@ import React from "react";
 
 export default function ProductItem({ data }) {
   return (
-    <div className="product-images">
+    <div className="product-card">
       {data.map((product) => (
         <div>
-          <p>{product.name}</p>
           <div>
             {product.images.map((img) => (
               <img src={img} alt="" />
             ))}
           </div>
+          <h3>
+            {product.name} {product.productId}
+          </h3>
+          <p>Qty: {product.quantity}</p>
+          <p>Price: {product.price}</p>
         </div>
       ))}
     </div>
