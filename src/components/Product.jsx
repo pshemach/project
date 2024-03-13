@@ -5,7 +5,7 @@ export default function Product() {
   const [data, setData] = useState(null);
   const [imageSet, setImageSet] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const itemsPerSet = 8;
+  const itemsPerSet = 4;
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Product() {
   }, []);
 
   const getImageSet = () => {
-    const startIndex = (imageSet - 1) * itemsPerSet;
+    const startIndex = (-1 + imageSet) * itemsPerSet;
     const endIndex = startIndex + itemsPerSet;
     return data ? data.slice(startIndex, endIndex) : [];
   };
@@ -31,6 +31,7 @@ export default function Product() {
         document.documentElement;
       if (scrollTop + clientHeight >= scrollHeight) {
         setImageSet((prevSet) => prevSet + 1);
+        console.log("current-hieght", scrollTop + clientHeight);
       }
     }
   };
