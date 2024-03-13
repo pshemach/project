@@ -6,11 +6,18 @@
 
 .image-card-container {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1600px;
+  height: 800px;
+  padding: 10px;
+  overflow-y: auto;
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-card {

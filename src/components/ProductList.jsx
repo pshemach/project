@@ -16,6 +16,7 @@ export default function ProductList() {
           `http://localhost:8000/products?offset-${offset}&limit-${itemsPerSet}`
         );
         const newData = await response.json();
+        console.log(newData);
         setProducts((prevProducts) => [...prevProducts, ...newData]);
       } catch (err) {
         console.error(err);
@@ -32,7 +33,7 @@ export default function ProductList() {
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
 
-      if (scrollTop + clientHeight >= scrollHeight - 500) {
+      if (scrollTop + clientHeight >= scrollHeight) {
         setOffset((prevOffset) => prevOffset + itemsPerSet);
       }
     };
