@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ProductItem from "./ProductItem";
 
 export default function Product() {
   const [data, setData] = useState(null);
@@ -11,22 +12,5 @@ export default function Product() {
       })
       .catch((err) => console.error(err));
   }, []);
-  return (
-    <div>
-      {data && (
-        <div className="product-images">
-          {data.map((product) => (
-            <div>
-              <p>{product.name}</p>
-              <div>
-                {product.images.map((img) => (
-                  <img src={img} alt="" />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
+  return <div>{data && <ProductItem data={data} />}</div>;
 }
