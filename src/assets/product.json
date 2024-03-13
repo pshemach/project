@@ -1,94 +1,184 @@
 {
   "products": [
     {
+      "id": 1,
       "productId": 1001,
       "name": "Mom Hat",
       "quantity": 30,
-      "images": ["./1-1.webp", "./1-2.webp", "./1-3.webp"]
+      "price": "15.23$",
+      "images": [
+        "https://i.etsystatic.com/38927924/r/il/8ef91c/5844401737/il_794xN.5844401737_rv25.jpg",
+        "https://i.etsystatic.com/38927924/r/il/c18873/5844390893/il_794xN.5844390893_82m1.jpg",
+        "https://i.etsystatic.com/38927924/r/il/ff2983/5796312244/il_794xN.5796312244_dfvi.jpg"
+      ]
     },
     {
+      "id": 2,
       "productId": 1002,
       "name": "Dad Hat",
       "quantity": 25,
-      "images": ["./2-1.webp", "./2-2.webp", "./2-3.webp"]
+      "price": "13.23$",
+      "images": [
+        "https://i.etsystatic.com/41033999/r/il/32d274/5357067145/il_794xN.5357067145_1ogv.jpg",
+        "https://i.etsystatic.com/41033999/r/il/36631d/5308890548/il_794xN.5308890548_b1bk.jpg",
+        "https://i.etsystatic.com/41033999/r/il/f4d447/5308890490/il_794xN.5308890490_1o17.jpg"
+      ]
     },
     {
+      "id": 3,
       "productId": 1003,
       "name": "Tail Keychain",
       "quantity": 56,
-      "images": ["./3-1.webp", "./3-2.webp", "./3-3.webp"]
+      "price": "17.63$",
+      "images": [
+        "https://i.etsystatic.com/33850909/r/il/1dbb31/4499520577/il_794xN.4499520577_4nwr.jpg",
+        "https://i.etsystatic.com/33850909/r/il/19a84a/4452167836/il_794xN.4452167836_70nz.jpg",
+        "https://i.etsystatic.com/33850909/r/il/38bf45/4499520713/il_794xN.4499520713_ldeu.jpg"
+      ]
     },
     {
+      "id": 4,
       "productId": 1004,
       "name": "Silk Scarf",
       "quantity": 12,
-      "images": ["./4-1.webp", "./4-2.webp", "./4-3.webp"]
+      "price": "20.53$",
+      "images": [
+        "https://i.etsystatic.com/39126891/r/il/ad0ff8/5688177083/il_794xN.5688177083_bhx9.jpg",
+        "https://i.etsystatic.com/39126891/r/il/ef861a/5688177159/il_794xN.5688177159_qozt.jpg",
+        "https://i.etsystatic.com/39126891/r/il/a62347/5688177211/il_794xN.5688177211_4103.jpg"
+      ]
     },
     {
+      "id": 5,
       "productId": 1005,
       "name": "Dummy Chain",
       "quantity": 41,
-      "images": ["./5-1.webp", "./5-2.webp", "./5-3.webp"]
+      "price": "42.43$",
+      "images": [
+        "https://i.etsystatic.com/23506531/r/il/71c051/4903500387/il_794xN.4903500387_95ff.jpg",
+        "https://i.etsystatic.com/23506531/r/il/25e8a3/4855237378/il_794xN.4855237378_f7f1.jpg",
+        "https://i.etsystatic.com/23506531/r/il/27fad9/4903500203/il_794xN.4903500203_h4aq.jpg"
+      ]
     },
     {
+      "id": 6,
       "productId": 1006,
       "name": "Dangle Earring",
       "quantity": 81,
-      "images": ["./6-1.webp", "./6-2.webp", "./6-3.webp"]
+      "price": "19.21$",
+      "images": [
+        "https://i.etsystatic.com/49103160/r/il/bd6ef2/5823346342/il_794xN.5823346342_ewkz.jpg",
+        "https://i.etsystatic.com/49103160/r/il/ec7ff4/5823346494/il_794xN.5823346494_l8rl.jpg",
+        "https://i.etsystatic.com/49103160/r/il/6e01cd/5823346606/il_794xN.5823346606_1sun.jpg"
+      ]
     },
     {
+      "id": 7,
       "productId": 1007,
       "name": "Couple Necklace",
       "quantity": 19,
-      "images": ["./7-1.webp", "./7-2.webp", "./7-3.webp"]
+      "price": "32.43$",
+      "images": [
+        "https://i.etsystatic.com/30603219/r/il/a25289/3604333114/il_794xN.3604333114_3cs3.jpg",
+        "https://i.etsystatic.com/30603219/r/il/3c18d2/3600271895/il_794xN.3600271895_9gee.jpg",
+        "https://i.etsystatic.com/30603219/r/il/66371f/3552631090/il_794xN.3552631090_tob2.jpg"
+      ]
     },
     {
+      "id": 8,
       "productId": 1008,
       "name": "Pearl Necklace",
       "quantity": 29,
-      "images": ["./8-1.webp", "./8-2.webp", "./8-3.webp"]
+      "price": "52.42$",
+      "images": [
+        "https://i.etsystatic.com/21008709/r/il/217ab7/5076137498/il_794xN.5076137498_t280.jpg",
+        "https://i.etsystatic.com/21008709/r/il/de5493/5076136266/il_794xN.5076136266_ghw3.jpg",
+        "https://i.etsystatic.com/21008709/r/il/c2fe43/5124368461/il_794xN.5124368461_nodr.jpg"
+      ]
     },
     {
+      "id": 9,
       "productId": 1009,
       "name": "Name Necklace",
       "quantity": 29,
-      "images": ["./9-1.webp", "./9-2.webp", "./9-3.webp"]
+      "price": "33.23$",
+      "images": [
+        "https://i.etsystatic.com/30502574/r/il/5e95b1/5790196242/il_794xN.5790196242_gibd.jpg",
+        "https://i.etsystatic.com/30502574/r/il/ed9783/5838180083/il_794xN.5838180083_8joq.jpg",
+        "https://i.etsystatic.com/30502574/r/il/d8af32/5838180389/il_794xN.5838180389_r6a1.jpg"
+      ]
     },
     {
+      "id": 10,
       "productId": 1010,
       "name": "Pearl Cufflink",
       "quantity": 10,
-      "images": ["./10-1.webp", "./10-2.webp", "./10-3.webp"]
+      "price": "29.23$",
+      "images": [
+        "https://i.etsystatic.com/16608418/r/il/fcd1a3/2996291598/il_794xN.2996291598_qlf0.jpg",
+        "https://i.etsystatic.com/16608418/r/il/741ba0/3167605417/il_794xN.3167605417_ixxn.jpg",
+        "https://i.etsystatic.com/16608418/r/il/14e361/3167605495/il_794xN.3167605495_kv1v.jpg"
+      ]
     },
     {
+      "id": 11,
       "productId": 1011,
       "name": "Cross Bracelet",
       "quantity": 48,
-      "images": ["./11-1.webp", "./11-2.webp", "./11-3.webp"]
+      "price": "36.23$",
+      "images": [
+        "https://i.etsystatic.com/37264347/r/il/439d3c/4957216983/il_794xN.4957216983_n6lm.jpg",
+        "https://i.etsystatic.com/37264347/r/il/b67f88/4908952152/il_794xN.4908952152_doa7.jpg",
+        ".https://i.etsystatic.com/37264347/r/il/67d9bc/4908952338/il_794xN.4908952338_frgm.jpg"
+      ]
     },
     {
+      "id": 12,
       "productId": 1012,
       "name": "Aquamarine Ring",
       "quantity": 61,
-      "images": ["./12-1.webp", "./12-2.webp", "./12-3.webp"]
+      "price": "21.23$",
+      "images": [
+        "https://i.etsystatic.com/41684588/r/il/53da16/4848653777/il_794xN.4848653777_mauq.jpg",
+        "https://i.etsystatic.com/41684588/r/il/16098a/4800382700/il_794xN.4800382700_7i4h.jpg",
+        "https://i.etsystatic.com/41684588/r/il/f41097/4848651977/il_794xN.4848651977_oxp1.jpg"
+      ]
     },
     {
+      "id": 13,
       "productId": 1013,
       "name": "Emarld Ring",
       "quantity": 48,
-      "images": ["./13-1.webp", "./13-2.webp", "./13-3.webp"]
+      "price": "65.23$",
+      "images": [
+        "https://i.etsystatic.com/41684588/r/il/40a39f/4771917006/il_794xN.4771917006_zec7.jpg",
+        "https://i.etsystatic.com/41684588/r/il/9fc98f/4771913136/il_794xN.4771913136_gupf.jpg",
+        "https://i.etsystatic.com/41684588/r/il/caa96e/4771913160/il_794xN.4771913160_opx1.jpg"
+      ]
     },
     {
+      "id": 14,
       "productId": 1014,
       "name": "Pandora Ring",
       "quantity": 35,
-      "images": ["./14-1.webp", "./14-2.webp", "./14-3.webp"]
+      "price": "23.23$",
+      "images": [
+        "https://i.etsystatic.com/14255084/r/il/212bb9/5802738731/il_794xN.5802738731_e0mh.jpg",
+        "https://i.etsystatic.com/14255084/r/il/750e86/5754668828/il_794xN.5754668828_fr6t.jpg",
+        "https://i.etsystatic.com/14255084/r/il/cabac8/5802738855/il_794xN.5802738855_nm99.jpg"
+      ]
     },
     {
+      "id": 15,
       "productId": 1015,
       "name": "Open Ring",
       "quantity": 77,
-      "images": ["./15-1.webp", "./15-2.webp", "./15-3.webp"]
+      "price": "57.23$",
+      "images": [
+        "https://i.etsystatic.com/25311599/r/il/32485b/4504113981/il_794xN.4504113981_74e6.jpg",
+        "https://i.etsystatic.com/25311599/r/il/5a922d/4504112163/il_794xN.4504112163_fvg5.jpg",
+        "https://i.etsystatic.com/25311599/r/il/ba73da/4456747422/il_794xN.4456747422_g3uf.jpg"
+      ]
     }
   ]
 }
