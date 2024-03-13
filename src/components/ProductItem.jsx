@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-export default function ProductItem({ data }) {
+export default function ProductItem({ product }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % product.images.length
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [product.images.length]);
+
   return (
     <div className="product-card">
-      {data.map((product) => (
-        <div>
-          <div>
-            {product.images.map((img) => (
-              <img src={img} alt="" />
-            ))}
-          </div>
-          <h3>
-            {product.name} {product.productId}
-          </h3>
-          <p>Qty: {product.quantity}</p>
-          <p>Price: {product.price}</p>
-        </div>
-      ))}
+      <img src={product.images[currentImageIndex]} alt={product.name} />
+      <h3>{product.name}</h3>
+      <p>Qty: {product.quantity}</p>
     </div>
   );
 }

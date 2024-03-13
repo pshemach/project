@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ProductItem from "./ProductItem";
+import "./product.css";
 
 export default function Product() {
   const [data, setData] = useState(null);
@@ -44,7 +45,7 @@ export default function Product() {
   return (
     <div>
       <div ref={containerRef}>
-        {data && <ProductItem data={getImageSet()} />}
+        {data && <ProductItem product={getImageSet()} />}
         {isLoading && <p>Loading...</p>}
       </div>
     </div>

@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.image-card-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  width: 480px;
+  height: 400px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 100%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
