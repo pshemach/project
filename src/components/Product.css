@@ -39,3 +39,28 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
+.product-card-navigate {
+  border: solid #e1e1e1;
+  padding: 20px;
+  margin: 3% auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-card-navigate p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-card-navigate button {
+  background-color: #0dd354;
+  display: block;
+  margin: 15px auto;
+  padding: 10px 60px;
+  border-radius: 5px;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 0;
+}
