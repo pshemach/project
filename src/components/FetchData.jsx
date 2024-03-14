@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import ProductItem from "./ProductItem";
-import "./Product.css";
 
 export default function FetchData() {
   const [products, setProducts] = useState([]);
