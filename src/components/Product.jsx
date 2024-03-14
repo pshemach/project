@@ -1,53 +1,50 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
-import "./product.css";
+import "./Product.css";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function Product() {
-  const [data, setData] = useState(null);
-  const [imageSet, setImageSet] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
-  const itemsPerSet = 4;
-  const containerRef = useRef(null);
+  const size = 8;
+  const [page, setPage] = useState(0);
+  const [product, setProduct] = useState([]);
+  const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/products`)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        console.log(data);
-      })
-      .catch((err) => console.error(err));
+    fetchProducts();
   }, []);
 
-  const getImageSet = () => {
-    const startIndex = (-1 + imageSet) * itemsPerSet;
-    const endIndex = startIndex + itemsPerSet;
-    return data ? data.slice(startIndex, endIndex) : [];
-  };
-
-  const handleScroll = () => {
-    const container = containerRef.current;
-    if (container) {
-      const { scrollTop, clientHeight, scrollHeight } =
-        document.documentElement;
-      if (scrollTop + clientHeight >= scrollHeight) {
-        setImageSet((prevSet) => prevSet + 1);
-        console.log("current-hieght", scrollTop + clientHeight);
-      }
+  async function fetchProducts() {
+    const response = await fetch(
+      `https://dummyjson.com/products?limit=${size}&skip=${page * size}`
+    );
+    const data = await response.json();
+    if (data.products.length === 0) {
+      setHasMore(false);
+    } else {
+      setProduct((prev) => [...prev, ...data.products]);
     }
-  };
+  }
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  function loadMore() {
+    setPage((prevPage) => prevPage + 1);
+    console.log(page);
+    fetchProducts();
+  }
 
   return (
-    <div>
-      <div ref={containerRef}>
-        {data && <ProductItem product={getImageSet()} />}
-        {isLoading && <p>Loading...</p>}
+    <InfiniteScroll
+      dataLength={50}
+      next={loadMore}
+      hasMore={hasMore}
+      loader={<p>Loading data again....</p>}
+      endMessage={<p>This is the end...</p>}
+    >
+      {console.log(product.length)}
+      <div className="image-card-container">
+        {product.map((product, index) => (
+          <ProductItem key={index} product={product} />
+        ))}
       </div>
-    </div>
+    </InfiniteScroll>
   );
 }

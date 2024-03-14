@@ -13,11 +13,12 @@ export default function ProductList() {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:8000/products?offset-${offset}&limit-${itemsPerSet}`
+          `https://dummyjson.com/products?limit=${itemsPerSet}&skip=${
+            offset * itemsPerSet
+          }`
         );
         const newData = await response.json();
-        console.log(newData);
-        setProducts((prevProducts) => [...prevProducts, ...newData]);
+        setProducts((prevProducts) => [...prevProducts, ...newData.products]);
       } catch (err) {
         console.error(err);
       } finally {
@@ -26,15 +27,16 @@ export default function ProductList() {
     };
 
     fetchData();
-  }, [offset]);
+    console.log(products);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
 
-      if (scrollTop + clientHeight >= scrollHeight) {
-        setOffset((prevOffset) => prevOffset + itemsPerSet);
+      if (scrollTop + clientHeight >= scrollHeight - 100) {
+        setOffset((prevOffset) => prevOffset + 1);
       }
     };
 

@@ -16,9 +16,9 @@ export default function ProductItem({ product }) {
     <div className="product-card">
       <img src={product.images[currentImageIndex]} alt={product.name} />
       <h3>
-        {product.name} {product.productId}
+        {product.title} {product.productId}
       </h3>
-      <p>Qty: {product.quantity}</p>
+      <p>Qty: {product.stock}</p>
       <p>Price: {product.price}</p>
     </div>
   );
