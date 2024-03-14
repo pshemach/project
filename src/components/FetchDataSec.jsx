@@ -2,13 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import ProductItem from "./ProductItem";
 
 export default function FetchDataSec() {
-  const [product, setProduct] = useState([]);
   const size = 8;
   const [page, setPage] = useState(0);
+  const [product, setProduct] = useState([]);
   const containerRef = useRef(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   async function fetchingData() {
+    setIsLoading(true);
     const res = await fetch(
       `https://dummyjson.com/products?limit=${size}&skip=${page * size}`
     );
