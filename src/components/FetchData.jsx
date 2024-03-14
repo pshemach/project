@@ -5,6 +5,7 @@ export default function FetchData() {
   const [products, setProducts] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(0);
+  const size = 8;
 
   const elementRef = useRef(null);
 
@@ -27,9 +28,10 @@ export default function FetchData() {
       }
     };
   }, [products]);
+
   async function fetchMore() {
     const response = await fetch(
-      `https://dummyjson.com/products?limit=8&skip=${page * 8}`
+      `https://dummyjson.com/products?limit=${size}&skip=${page * size}`
     );
     const data = await response.json();
     console.log(data);
