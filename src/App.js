@@ -3,8 +3,6 @@ import "./App.css";
 import Home from "./components/Home";
 import Error from "./components/Error";
 import FetchData from "./components/FetchData";
-import ProductList from "./components/ProductList";
-import Product from "./components/Product";
 
 function App() {
   return (
@@ -13,8 +11,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<FetchData />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/items" element={<Product />} />
           <Route path="/error" element={<Error />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
